@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.4rem;
+  background-color: rgba(23, 23, 23, 0.795);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.flex {
+  display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex-col-center{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-content: center;
+}
+.container {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+.header {
+  margin-bottom: 1.5rem;
+}
+.btn-fill {
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+	font-size: 250%; /* 45px */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+	font-size: 200%; /* 36px */
 }
+
+h3 {
+	font-size: 177.78%; /* 32px */
+}
+
+h4 {
+	font-size: 162.5%; /* 26px */
+}
+
+h5 {
+	font-size: 122%; /* 22px */
+}
+
+h6 {
+	font-size: 100%; /* 18px */
+} 

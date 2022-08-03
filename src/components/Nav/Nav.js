@@ -1,15 +1,32 @@
 import React from "react";
+import { Outlet, Link } from "react-router-dom";
+import { useRecoilValue } from "recoil";
+import { locState } from "../App-States/states";
 
 export default function Nav() {
+  const loc = useRecoilValue(locState);
+  const homeActivated = () => {
+    if (loc === "MAIN") return "active";
+    else return "";
+  };
+  const loginActivated = () => {
+    if (loc === "LOGIN") return "active";
+    else return "";
+  };
+
   return (
-    <nav class="ui inverted menu">
-      <a class="item">Home</a>
-      <a class="item">Messages</a>
-      <a class="item active">Friends</a>
-      <div class="right menu">
-        <a class="ui item">Sign Up</a>
-        <a class="ui item active">Sign In</a>
-      </div>
-    </nav>
+    <>
+      <nav className="ui inverted menu">
+        <Link to="/" className={`ui item ${homeActivated()}`}>
+          Home
+        </Link>
+        <div className="right menu">
+          <Link to="/login" className={`ui item ${loginActivated()}`}>
+            Sign In
+          </Link>
+        </div>
+      </nav>
+      <Outlet />
+    </>
   );
 }

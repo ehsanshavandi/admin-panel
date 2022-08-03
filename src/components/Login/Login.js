@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSetRecoilState } from "recoil";
+import { locState } from "../App-States/states";
 
 export default function Login() {
+  const setLoc = useSetRecoilState(locState);
+  useEffect(() => {
+    //Runs on every render
+    setLoc("LOGIN");
+  });
   const onSubmitLogin = (e) => {
     e.preventDefault();
   };
